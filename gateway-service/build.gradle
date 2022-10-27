@@ -25,6 +25,13 @@ ext {
 dependencies {
     implementation 'org.springframework.cloud:spring-cloud-starter-gateway'
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+
+    implementation group: 'io.netty', name: 'netty-resolver-dns-native-macos', version: '4.1.68.Final', classifier: 'osx-aarch_64'
+
+    // spring-cloud-config 설정
+    implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-config', version: '3.1.4'
+    implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-bootstrap', version: '3.1.4'
+
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'

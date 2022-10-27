@@ -18,6 +18,7 @@ spring:
           uri: lb://MARKET-SERVICE
           predicates:
             - Path=/market-service/**
+#            - Method=GET,POST
           filters:
-            - RemoveRequestHeader=Cookie
+#            - RemoveRequestHeader=Cookie
             - RewritePath=/market-service/(?<segment>.*), /$\{segment}
