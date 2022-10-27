@@ -2,12 +2,16 @@ server:
   port: 0
 
 spring:
+  cloud:
+    discovery:
+      enabled: true
   application:
     name: market-service
 
 eureka:
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    prefer-ip-address: true
   client:
     register-with-eureka: true
     fetch-registry: true
