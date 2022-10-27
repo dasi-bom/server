@@ -16,3 +16,5 @@ spring:
       routes:
         - id: market-service
           uri: lb://MARKET-SERVICE
+          predicates:
+            - Path=/market-service/**
